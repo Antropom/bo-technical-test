@@ -7,6 +7,7 @@ $lightGray2: #757575;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $lightGray2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +21,6 @@ $lightGray2: #757575;
   border-radius: 4px;
   padding: 30px;
   margin: auto;
-  margin-top: 20%;
   background-color: #ffffff;
 }
 
@@ -31,6 +31,7 @@ $lightGray2: #757575;
   margin-right: 6px;
   padding-bottom: 15px;
   color: $lightGray2;
+  cursor: pointer;
   :visited {
     color: $lightGray2;
   }
@@ -40,7 +41,7 @@ $lightGray2: #757575;
 }
 
 .btn {
-  width: 100px;
+  width: 100%;
 }
 
 .errorMsg {
