@@ -3,21 +3,26 @@ import { Card, CardMedia, CardContent, Typography, Grid } from '@material-ui/cor
 
 import styles from './videos.module.scss';
 
-function VideosView({ usersVideos, t }) {
+import noThumbnailPlaceholder from '../../assets/images/no-thumbnail.png';
+
+function VideosView({ usersVideos, t, onVideoClick }) {
   return (
     <div className={styles.userVideosWrapper}>
-      <Typography className={styles.title} variant="div">
-        {t('myVideos')}
-      </Typography>
+      <h2 className={styles.title}>{t('myVideos')}</h2>
 
       <Grid container spacing={2}>
         {usersVideos.map((video) => (
           <Grid item xs={12} sm={6} lg={4} key={video.id}>
-            <Card className={styles.videoCard}>
-              <CardMedia component="img" height="250" image={video.thumbnail} alt={video.title} />
+            <Card className={styles.videoCard} onClick={() => onVideoClick(video.id)}>
+              <CardMedia
+                component="img"
+                height="250"
+                image={video.thumbnail || noThumbnailPlaceholder}
+                alt={video.title || t('noTitle')}
+              />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  {!!video.title ? video.title : t('noTitle')}
+                  {video.title || t('noTitle')}
                 </Typography>
               </CardContent>
             </Card>

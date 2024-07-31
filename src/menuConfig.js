@@ -9,6 +9,7 @@ import Test from './Pages/Test';
 import Home from './Pages/Home';
 import { colors } from './muiColors';
 import Videos from './Pages/Videos';
+import VideoEdit from './Pages/VideoEdit';
 
 // import { ROLES } from './models/User/User.constants'; used to restrict menu access
 
@@ -70,6 +71,14 @@ const MENU_ENTRIES = [
     path: '/videos',
     icon: <OndemandVideoIcon />,
     component: () => <Videos />,
+
+    subItems: [
+      {
+        name: 'Edit',
+        path: '/:videoId/edit',
+        component: () => <VideoEdit />,
+      },
+    ],
   },
 ];
 
