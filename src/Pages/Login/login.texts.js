@@ -1,5 +1,5 @@
 export default {
-  namespace: 'users',
+  namespace: 'login',
   resources: {
     fr: {
       username: "Nom d'utilisateur",
@@ -16,6 +16,14 @@ export default {
       login: 'Login',
       connectionError: 'Connection error',
       forgotPassword: 'Forgot password',
+    },
+    it: {
+      username: 'Nome utente',
+      password: 'Password',
+      required: 'Campo obbligatorio',
+      login: 'Accesso',
+      connectionError: 'Errore di connessione',
+      forgotPassword: 'Password dimenticata',
     },
   },
 };

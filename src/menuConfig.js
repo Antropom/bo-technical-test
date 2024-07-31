@@ -2,11 +2,13 @@ import React from 'react';
 import WidgetsIcon from '@material-ui/icons/Widgets';
 import HomeIcon from '@material-ui/icons/Home';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
 
 import NotAvailable from './Pages/NotAvailable';
 import Test from './Pages/Test';
 import Home from './Pages/Home';
 import { colors } from './muiColors';
+import Videos from './Pages/Videos';
 
 // import { ROLES } from './models/User/User.constants'; used to restrict menu access
 
@@ -62,6 +64,12 @@ const MENU_ENTRIES = [
     icon: <WidgetsIcon />,
     component: () => <Test />,
     skipDisplay: !['local', 'develop'].some((env) => env === nodeEnv),
+  },
+  {
+    name: 'videos',
+    path: '/videos',
+    icon: <OndemandVideoIcon />,
+    component: () => <Videos />,
   },
 ];
 

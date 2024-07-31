@@ -1,0 +1,25 @@
+.userVideosWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto 0;
+  padding: 10px;
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.videoCard {
+    transition: transform 0.2s ease-in-out;
+}
+
+.videoCard:hover {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
